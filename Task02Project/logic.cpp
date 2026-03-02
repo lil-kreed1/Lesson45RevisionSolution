@@ -22,8 +22,8 @@ int count_above_average(int array[DEFAULT_SIZE], int length) {
 	int count = 0;
 	for (int i = 0; i < length; i++)
 	{
-		if (array[i] > arithmetic) {
-			count++;
+		if (array[i] < arithmetic) {
+			count+=array[i];
 		}
 	}
 	return count;
