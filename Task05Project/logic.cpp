@@ -8,8 +8,14 @@
 #include "logic.h"
 
 void reverse(int array[DEFAULT_SIZE], int size, int a, int b) {
-    if (a < 0 || b >= size || a > b) {
+    if (a < 0 || b < 0 || a >= size || b >= size) {
         return;
+    }
+
+    if (a >= b) {
+        int temp = a;
+        a = b;
+        b = temp;
     }
 
     while (a < b) {
